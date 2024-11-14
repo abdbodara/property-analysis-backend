@@ -14,7 +14,7 @@ import seaborn as sns
 from django.http import HttpResponse
 
 
-with open('../city-trees.json', 'r') as f:
+with open('./city-trees.json', 'r') as f:
     city_trees_data = json.load(f)
 
 tree_data_list = []
@@ -27,7 +27,7 @@ for street, tree_info in city_trees_data.items():
             })
 
 tree_data = pd.DataFrame(tree_data_list)
-property_data = pd.read_csv('../property-data.csv', encoding='latin1')
+property_data = pd.read_csv('./property-data.csv', encoding='latin1')
 property_data['Price'] = property_data['Price'].replace(r'[£$,ï¿½]', '', regex=True).astype(float)
 merged_data = pd.merge(property_data, tree_data, on='street_name', how='left')
 encoder = LabelEncoder()
