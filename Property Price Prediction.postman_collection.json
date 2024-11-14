@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "f6235523-0c67-4654-853a-86935255f796",
+		"name": "Property Price Prediction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39706411"
+	},
+	"item": [
+		{
+			"name": "PricePredictionView",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"street_name\": \"some_street_name\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/predict-price/ ",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"predict-price",
+						" "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data Summary",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/data-summary/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"data-summary",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Price Distribution",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/price-distribution/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"price-distribution",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Model Evaluation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/model-evaluation/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"model-evaluation",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Boxplot of Property Prices by Tree Height",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/plot-price-by-height/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"plot-price-by-height",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actual vs. Predicted Prices Scatter Plot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/plot-actual-vs-predicted/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"plot-actual-vs-predicted",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
